@@ -12,6 +12,12 @@ namespace BlocklyForHouse.Transform.XmlToPython
             xmlDocument.LoadXml(text);
             currentNode = xmlDocument.DocumentElement;
         }
+
+
+        public void NextNode()
+        {
+            currentNode = currentNode.FirstChild;
+        }
     }
 
 

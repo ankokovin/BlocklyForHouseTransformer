@@ -9,7 +9,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            throw new NotImplementedException();
+            context.NextNode();
+            return "temperature(" + new Values.Temperature().Interpret(context) + ")";
         }
     }
 }

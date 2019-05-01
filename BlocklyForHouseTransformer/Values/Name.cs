@@ -7,7 +7,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Values
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            context.currentNode = context.currentNode.FirstChild;
+            context.NextNode();
             return (new Blocks.Text()).Interpret(context);
         }
     }

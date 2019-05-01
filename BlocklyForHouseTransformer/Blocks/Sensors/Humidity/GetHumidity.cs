@@ -7,7 +7,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            throw new NotImplementedException();
+            context.currentNode = context.currentNode.FirstChild;
+            return "hum_get(" + (new Values.HumiditySensor()).Interpret(context) + ")";
         }
     }
 }
