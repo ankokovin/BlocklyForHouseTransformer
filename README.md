@@ -2,6 +2,8 @@
 
 Транслятор для [BlocklyForHouse](https://github.com/ankokovin/BlocklyForHouse) c xml в python
 
+Расчитан на использование с версией [0.1.2](https://ankokovin.github.io/BlocklyForHouse/version/0.1.2/index.html)
+
 Создан как Лабораторная работа №5 "Паттерны поведения: интерпретатор".
 
 В командном проекте скорее всего использован не будет:
