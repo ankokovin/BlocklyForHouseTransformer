@@ -2,7 +2,7 @@
 {
     public class Field : AbstractExpression
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
             System.Diagnostics.Debug.Assert(context.currentNode.Name == "field");
             return context.currentNode.InnerText;

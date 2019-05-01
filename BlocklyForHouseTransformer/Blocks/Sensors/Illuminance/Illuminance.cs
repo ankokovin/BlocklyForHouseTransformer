@@ -6,11 +6,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     class Illuminance : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return string.Format(Literals.Call, Literals.Illuminance, (new Field()).Interpret(context));
+            var result = string.Format(Literals.Call, Literals.Illuminance, (new Field()).Interpret(ref context));
+            context.ParentNode();
+            return result;
         }
     }
 }

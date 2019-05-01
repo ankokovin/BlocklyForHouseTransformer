@@ -2,11 +2,14 @@
 {
     public class Humidity : Value
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Blocks.Humidity()).Interpret(context);
+            var result = (new Blocks.Humidity()).Interpret(ref context);
+
+            context.ParentNode();
+            return result;
         }
     }
 }

@@ -6,12 +6,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     class HumiditySensor : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return string.Format(Literals.Call, Literals.HumiditySensorCreate, (new Values.Name()).Interpret(context));
-
+            var result = string.Format(Literals.Call, Literals.HumiditySensorCreate, (new Values.Name()).Interpret(ref context));
+            context.ParentNode();
+            return result;
         }
     }
 }

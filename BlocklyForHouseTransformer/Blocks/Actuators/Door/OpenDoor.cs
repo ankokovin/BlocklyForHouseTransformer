@@ -3,11 +3,14 @@
     [Custom_attributes.BodyCommand("open_door")]
     public class OpenDoor : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Values.Door().Interpret(context)) + "."+Literals.DoorOpen+"()\n";
+            var result = (new Values.Door().Interpret(ref context)) + "."+Literals.DoorOpen+"()";
+            context.ParentNode();
+            context.NextCheck();
+            return result;
         }
     }
 }

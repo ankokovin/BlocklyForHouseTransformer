@@ -4,9 +4,9 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     public class Script : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             var node = context.currentNode;
             string result = string.Format(Literals.Import,Literals.PackageName)+'\n';
             string ev = string.Empty;
@@ -18,13 +18,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
                 switch (item.Attributes["name"].Value)
                 {
                     case "NAME":
-                        name = (new Values.Name()).Interpret(context);
+                        name = (new Values.Name()).Interpret(ref context);
                         break;
                     case "EVENT":
-                        ev = (new Values.Event()).Interpret(context);
+                        ev = (new Values.Event()).Interpret(ref context);
                         break;
                     case "BODY":
-                        body = (new Statements.Body()).Interpret(context);
+                        body = (new Statements.Body()).Interpret(ref context);
                         break;
                     
                 }
@@ -37,7 +37,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
             else
                 result += ev;
 
-            result += '\n';
+            result += "\n\n";
             result += Literals.Body + "\n";
             if (string.IsNullOrEmpty(body))
                 result += BlocklyTransformer.AddSpaces(1) + Literals.EmptyBody;

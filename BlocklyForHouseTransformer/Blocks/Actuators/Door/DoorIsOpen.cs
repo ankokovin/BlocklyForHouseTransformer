@@ -3,11 +3,13 @@
     [Custom_attributes.EventStarterAttribute("door_is_open")]
     public class DoorIsOpen : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Values.Door().Interpret(context)) + "."+Literals.DoorIsOpen+"()";
+            var result = (new Values.Door().Interpret(ref context)) + "."+Literals.DoorIsOpen+"()";
+            context.ParentNode();
+            return result;
         }
     }
 }

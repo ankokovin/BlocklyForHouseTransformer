@@ -8,7 +8,7 @@ namespace BlocklyForHouse.Transform.ConsoleClient
         {
             //TODO work with args
 
-            using(StreamReader sr = new StreamReader("C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\BlocklyForHouseXmlToPython\\ConsoleClient\\input.xml"))
+            using(StreamReader sr = new StreamReader("C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\BlocklyForHouseTransformer\\ConsoleClient\\input.xml"))
             {
                 string xml = sr.ReadToEnd();
                 var transformer = new BlocklyTransformer();

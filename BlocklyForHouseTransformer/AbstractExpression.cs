@@ -2,6 +2,6 @@
 {
     public abstract class AbstractExpression
     {
-        public abstract string Interpret(XmlToPythonContext context);
+        public abstract string Interpret(ref XmlToPythonContext context);
     }
 }

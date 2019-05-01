@@ -2,11 +2,14 @@
 {
     public class Temperature : Value
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Blocks.Temperature()).Interpret(context);
+            var result = (new Blocks.Temperature()).Interpret(ref context);
+
+            context.ParentNode();
+            return result;
         }
     }
 }

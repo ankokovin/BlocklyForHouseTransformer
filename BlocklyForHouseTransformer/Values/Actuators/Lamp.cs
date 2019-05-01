@@ -2,11 +2,14 @@
 {
     public class Lamp : Value
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            throw new System.NotImplementedException();
+            var result = (new Blocks.Lamp()).Interpret(ref context);
+
+            context.ParentNode();
+            return result;
         }
     }
 }

@@ -6,11 +6,14 @@ namespace BlocklyForHouse.Transform.XmlToPython.Values
 {
     public class Event : Value
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return EventStarters[context.currentNode.Attributes["type"].Value].Interpret(context);
+            var result =  EventStarters[context.currentNode.Attributes["type"].Value].Interpret(ref context);
+
+            context.ParentNode();
+            return result;
         }
 
         private Dictionary<string, Blocks.Block> eventStarters;

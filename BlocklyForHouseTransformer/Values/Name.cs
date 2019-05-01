@@ -4,11 +4,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Values
 {
     public class Name : Value
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Blocks.Text()).Interpret(context);
+            var result = (new Blocks.Text()).Interpret(ref context);
+            context.ParentNode();
+            return result;
         }
     }
 }

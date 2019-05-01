@@ -5,11 +5,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     [Custom_attributes.EventStarter("lamp_is_on")]
     class LampIsOn : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
-            return (new Values.Lamp().Interpret(context)) + "."+Literals.LampIsOn+"()\n";
+            var result = (new Values.Lamp().Interpret(ref context)) + "."+Literals.LampIsOn+"()\n";
+            context.ParentNode();
+            return result;
         }
     }
 }

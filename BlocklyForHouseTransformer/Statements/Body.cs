@@ -6,16 +6,20 @@ namespace BlocklyForHouse.Transform.XmlToPython.Statements
 {
     public class Body : Statement
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
+            context.tabCount = 1;
             var result = string.Empty;
-            var node = context.currentNode;
-            foreach (XmlNode item in node.ChildNodes)
+            context.NextNode();
+            XmlNode prev;
+            do
             {
-                context.currentNode = item;
-                result += (Blocks[item.Attributes["type"].Value]).Interpret(context);
-            }
+                prev = context.currentNode;
+                result += BlocklyTransformer.AddSpaces(context.tabCount)
+                + (Blocks[context.currentNode.Attributes["type"].Value]).Interpret(ref context) + '\n';
+            } while (prev!=context.currentNode);
+            
             return result;
         }
 

@@ -12,7 +12,7 @@ namespace BlocklyForHouse.Transform
             foreach (XmlNode child in doc.ChildNodes)
             {
                 context.currentNode = child;
-                yield return (new XmlToPython.Blocks.Script().Interpret(context));
+                yield return (new XmlToPython.Blocks.Script().Interpret(ref context));
             }
         }
 

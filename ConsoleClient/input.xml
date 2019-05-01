@@ -1,17 +1,17 @@
 ﻿<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="script" id="^#=!6@mi1jxft.Nxaq$_" deletable="false" x="0" y="0">
+  <block type="script" id="k9L359bSO}Ule`o],DH5" deletable="false" x="0" y="0">
     <value name="NAME">
-      <block type="text" id="YR:%)RD-4/RL=6fIVD[e">
-        <field name="TEXT">a</field>
+      <block type="text" id="8hF8r0@T(R}PZfpSYwm`">
+        <field name="TEXT">d</field>
       </block>
     </value>
     <value name="EVENT">
-      <block type="door_is_open" id="t#0NDOq$h(5Tc:2T-(4`">
+      <block type="door_is_open" id="sB0s76w1qB|H_-38g$dn">
         <value name="door">
-          <block type="door" id="$-ywPwIXGeY0WSxixceO">
+          <block type="door" id="Mi|Rq1h!RNP|l.*lU/,]">
             <value name="NAME">
-              <block type="text" id="loG.hPvAz[nk,!$5/AmZ">
-                <field name="TEXT">b</field>
+              <block type="text" id="f?wpbGBJff.d:Zvc:hfw">
+                <field name="TEXT">c</field>
               </block>
             </value>
           </block>
@@ -19,16 +19,29 @@
       </block>
     </value>
     <statement name="BODY">
-      <block type="close_door" id="6%Qt#*!/#.]?K~/KBEFy">
+      <block type="open_door" id="EB:0O4{b{$zVQ@6nK$$;">
         <value name="door">
-          <block type="door" id="RX=d2ztxhCFT*17Of:3_">
+          <block type="door" id="Sio|]5RIUk6T;7:jl/Kj">
             <value name="NAME">
-              <block type="text" id="WBPTX7luVaFW%?4jt0P8">
-                <field name="TEXT">b</field>
+              <block type="text" id="l-/d,k0yCH,cc)l5sx;.">
+                <field name="TEXT">a</field>
               </block>
             </value>
           </block>
         </value>
+        <next>
+          <block type="close_door" id=",f;0PoIb{JoENI1Z34l`">
+            <value name="door">
+              <block type="door" id="DAUzPxu*kLtC-wqH/1}]">
+                <value name="NAME">
+                  <block type="text" id="wXUbf{Oemb::C|z=|^^o">
+                    <field name="TEXT">b</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
   </block>

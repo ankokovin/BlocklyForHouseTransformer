@@ -2,7 +2,7 @@
 {
     public abstract class Value : AbstractExpression
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
             System.Diagnostics.Debug.Assert(context.currentNode.Name == "value");
             return null;

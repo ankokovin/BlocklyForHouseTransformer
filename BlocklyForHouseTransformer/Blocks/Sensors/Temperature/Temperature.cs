@@ -6,13 +6,15 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     class Temperature : Block
     {
-        public override string Interpret(XmlToPythonContext context)
+        public override string Interpret(ref XmlToPythonContext context)
         {
-            base.Interpret(context);
+            base.Interpret(ref context);
             context.NextNode();
             
-            return string.Format(Literals.Call, Literals.Temperature, (new Values.Temperature()).Interpret(context));
+            var result =  string.Format(Literals.Call, Literals.Temperature, (new Values.Temperature()).Interpret(ref context));
 
+            context.ParentNode();
+            return result;
         }
     }
 }
