@@ -1,5 +1,6 @@
-﻿namespace BlocklyForHouse.Tranfrom.XmlToPython.Blocks
+﻿namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    [Custom_attributes.EventStarterAttribute("door_is_open")]
     public class DoorIsOpen : Block
     {
         public override string Interpret(XmlToPythonContext context)

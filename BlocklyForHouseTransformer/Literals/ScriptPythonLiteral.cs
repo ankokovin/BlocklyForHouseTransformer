@@ -1,4 +1,4 @@
-﻿namespace BlocklyForHouse.Tranfrom.XmlToPython.Literals
+﻿namespace BlocklyForHouse.Transform.XmlToPython.Literals
 {
     public static class ScriptPythonLiteral
     {
