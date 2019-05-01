@@ -1,0 +1,35 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="script" id="^#=!6@mi1jxft.Nxaq$_" deletable="false" x="0" y="0">
+    <value name="NAME">
+      <block type="text" id="YR:%)RD-4/RL=6fIVD[e">
+        <field name="TEXT">a</field>
+      </block>
+    </value>
+    <value name="EVENT">
+      <block type="door_is_open" id="t#0NDOq$h(5Tc:2T-(4`">
+        <value name="door">
+          <block type="door" id="$-ywPwIXGeY0WSxixceO">
+            <value name="NAME">
+              <block type="text" id="loG.hPvAz[nk,!$5/AmZ">
+                <field name="TEXT">b</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="BODY">
+      <block type="close_door" id="6%Qt#*!/#.]?K~/KBEFy">
+        <value name="door">
+          <block type="door" id="RX=d2ztxhCFT*17Of:3_">
+            <value name="NAME">
+              <block type="text" id="WBPTX7luVaFW%?4jt0P8">
+                <field name="TEXT">b</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
