@@ -5,7 +5,7 @@
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            context.currentNode = context.currentNode.FirstChild;
+            context.NextNode();
             throw new System.NotImplementedException();
         }
     }

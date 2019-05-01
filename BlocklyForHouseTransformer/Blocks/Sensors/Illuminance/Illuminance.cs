@@ -10,7 +10,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(context);
             context.NextNode();
-            return "illuminance(" + (new Field()).Interpret(context) + ")";
+            return string.Format(Literals.Call, Literals.Illuminance, (new Field()).Interpret(context));
         }
     }
 }

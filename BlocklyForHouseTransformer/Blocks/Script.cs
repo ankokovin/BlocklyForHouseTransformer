@@ -8,7 +8,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(context);
             var node = context.currentNode;
-            string result = Literals.ScriptPythonLiteral.Import;
+            string result = string.Format(Literals.Import,Literals.PackageName)+'\n';
             string ev = string.Empty;
             string body = string.Empty;
             string name = "None";
@@ -29,19 +29,23 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
                     
                 }
             }
-            result += Literals.ScriptPythonLiteral.Event;
+
+            result += '\n';
+            result += Literals.Event+"\n"+BlocklyTransformer.AddSpaces(1)+Literals.EventStart;
             if (string.IsNullOrEmpty(ev))
-                result += Literals.ScriptPythonLiteral.EmptyEvent;
+                result += Literals.EmptyEvent;
             else
                 result += ev;
 
-            result += Literals.ScriptPythonLiteral.Body;
+            result += '\n';
+            result += Literals.Body + "\n";
             if (string.IsNullOrEmpty(body))
-                result += Literals.ScriptPythonLiteral.EmptyBody;
+                result += BlocklyTransformer.AddSpaces(1) + Literals.EmptyBody;
             else
                 result += body;
 
-            result += Literals.ScriptPythonLiteral.Addition_start + name + Literals.ScriptPythonLiteral.Addition_end;
+            result += '\n';
+            result += string.Format(Literals.AddScript, name);
 
             return result;
         }

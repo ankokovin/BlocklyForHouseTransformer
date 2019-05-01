@@ -5,8 +5,8 @@
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            context.currentNode = context.currentNode.FirstChild;
-            return "door(" + (new Values.Name()).Interpret(context)+")";
+            context.NextNode();
+            return string.Format(Literals.Call,Literals.DoorCreate, (new Values.Name()).Interpret(context));
         }
     }
 }

@@ -15,5 +15,12 @@ namespace BlocklyForHouse.Transform
                 yield return (new XmlToPython.Blocks.Script().Interpret(context));
             }
         }
+
+
+
+        public static string AddSpaces(int count)
+        {
+            return new string(' ', 4 * count);
+        }
     }
 }

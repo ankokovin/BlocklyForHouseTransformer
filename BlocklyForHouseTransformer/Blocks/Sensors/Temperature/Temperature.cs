@@ -10,7 +10,9 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(context);
             context.NextNode();
-            return "temperature(" + new Values.Temperature().Interpret(context) + ")";
+            
+            return string.Format(Literals.Call, Literals.Temperature, (new Values.Temperature()).Interpret(context));
+
         }
     }
 }

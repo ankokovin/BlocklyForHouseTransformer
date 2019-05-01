@@ -8,7 +8,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(context);
             context.NextNode();
-            return "tem_get(" + (new Values.TemperatureSensor()).Interpret(context)+")";
+            return string.Format(Literals.Call, Literals.TemperatureGet, (new Values.TemperatureSensor()).Interpret(context));
+
         }
     }
 }

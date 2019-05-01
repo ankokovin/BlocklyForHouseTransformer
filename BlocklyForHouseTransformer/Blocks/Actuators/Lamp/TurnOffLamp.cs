@@ -8,8 +8,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         public override string Interpret(XmlToPythonContext context)
         {
             base.Interpret(context);
-            context.currentNode = context.currentNode.FirstChild;
-            return '\t' + (new Values.Lamp().Interpret(context)) + ".off()\n";
+            context.NextNode();
+            return (new Values.Lamp().Interpret(context)) + "."+Literals.LampOff+"()\n";
         }
     }
 }
