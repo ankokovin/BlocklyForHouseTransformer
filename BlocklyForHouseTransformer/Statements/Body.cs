@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace BlocklyForHouse.Tranfrom.XmlToPython.Statements
@@ -12,13 +13,17 @@ namespace BlocklyForHouse.Tranfrom.XmlToPython.Statements
             var node = context.currentNode;
             foreach (XmlNode item in node.ChildNodes)
             {
-                /* TODO: Необходим способ обнаружения!
-                 */
                 context.currentNode = item;
-                result += (new Blocks.CloseDoor()).Interpret(context);
+                result += (blocks[item.Attributes["type"].Value]).Interpret(context);
             }
             return result;
         }
+
+
+        private readonly Dictionary<string, Blocks.Block> blocks = new Dictionary<string, Blocks.Block>
+        {
+            ["close_door"] = new Blocks.CloseDoor(),
+        };
     }
 
 }

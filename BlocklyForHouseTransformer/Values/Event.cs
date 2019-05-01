@@ -9,19 +9,13 @@ namespace BlocklyForHouse.Tranfrom.XmlToPython.Values
         {
             base.Interpret(context);
             context.currentNode = context.currentNode.FirstChild;
-            /* TODO: механизм проверки, какой тип ноды, чтобы перебрать и найти его
-             * Возможно Dictionary
-             * foreach (var block in getEventStarters())
-            {
-                
-            }*/
-            return (new Blocks.DoorIsOpen().Interpret(context));
+            return EventStarters[context.currentNode.Attributes["type"].Value].Interpret(context);
         }
 
-        private IEnumerable<Blocks.Block> getEventStarters()
+        private Dictionary<string, Blocks.Block> EventStarters = new Dictionary<string, Blocks.Block>
         {
-            //TODO: строить список через рефлексию?
-            yield return  new Blocks.DoorIsOpen();
-        }
+            ["door_is_open"] = new Blocks.DoorIsOpen(),
+        };
+        
     }
 }
