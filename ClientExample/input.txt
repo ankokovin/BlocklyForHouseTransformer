@@ -1,3 +1,0 @@
-﻿<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="script" id="A=Bm73R~#y;P8Wy-guw#" deletable="false" x="0" y="0"></block>
-</xml>
