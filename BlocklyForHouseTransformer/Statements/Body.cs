@@ -14,16 +14,23 @@ namespace BlocklyForHouse.Transform.XmlToPython.Statements
             foreach (XmlNode item in node.ChildNodes)
             {
                 context.currentNode = item;
-                result += (blocks[item.Attributes["type"].Value]).Interpret(context);
+                result += (Blocks[item.Attributes["type"].Value]).Interpret(context);
             }
             return result;
         }
 
 
-        private readonly Dictionary<string, Blocks.Block> blocks = new Dictionary<string, Blocks.Block>
+        private Dictionary<string, Blocks.Block> blocks;
+
+        private Dictionary<string, Blocks.Block> Blocks
         {
-            ["close_door"] = new Blocks.CloseDoor(),
-        };
+            get
+            {
+                if (blocks == null)
+                    blocks = Custom_attributes.BodyCommandAttribute.GetBlocks();
+                return blocks;
+            }
+        }
     }
 
 }

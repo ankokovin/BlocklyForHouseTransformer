@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
-namespace BlocklyForHouse.Tranfrom.XmlToPython.Values
+namespace BlocklyForHouse.Transform.XmlToPython.Values
 {
     public class Event : Value
     {
@@ -12,10 +13,18 @@ namespace BlocklyForHouse.Tranfrom.XmlToPython.Values
             return EventStarters[context.currentNode.Attributes["type"].Value].Interpret(context);
         }
 
-        private Dictionary<string, Blocks.Block> EventStarters = new Dictionary<string, Blocks.Block>
+        private Dictionary<string, Blocks.Block> eventStarters;
+
+        private Dictionary<string, Blocks.Block> EventStarters
         {
-            ["door_is_open"] = new Blocks.DoorIsOpen(),
-        };
-        
+            get
+            {
+                if (eventStarters == null)
+                {
+                    eventStarters = Custom_attributes.EventStarterAttribute.GetBlocks();
+                }
+                return eventStarters;
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    [Custom_attributes.BodyCommand("close_door")]
     public class CloseDoor : Block
     {
         public override string Interpret(XmlToPythonContext context)
