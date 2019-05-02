@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlocklyForHouseTransformer\BlocklyForHouseTransformer.csproj" />
+    <ProjectReference Include="..\BlocklyForHouseTransformer\BlocklyForHouse.Transform.csproj" />
   </ItemGroup>
 
 </Project>

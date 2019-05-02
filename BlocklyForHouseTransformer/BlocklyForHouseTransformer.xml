@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>BlocklyForHouseTransformer</name>
+        <name>BlocklyForHouse.Transform</name>
     </assembly>
     <members>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.AbstractExpression">
@@ -211,6 +211,18 @@
             </summary>
             <typeparam name="T">Attribute, which implements <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute"/></typeparam>
             <returns>Dictionary of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/> with keys - <see cref="F:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.TypeName"/></returns>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Field">
+            <summary>
+            <para>&lt;field&gt;</para>
+            </summary>
+        </member>
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Field.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
+            <summary>
+            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Field"/>
+            </summary>
+            <param name="context">Context to interpret</param>
+            <returns>Python code</returns>
         </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Statements.Body">
             <summary>
