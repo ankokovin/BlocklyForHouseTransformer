@@ -31,7 +31,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Statements
             get
             {
                 if (blocks == null)
-                    blocks = Custom_attributes.BodyCommandAttribute.GetBlocks();
+                    blocks = Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.BodyCommandAttribute>();
                 return blocks;
             }
         }

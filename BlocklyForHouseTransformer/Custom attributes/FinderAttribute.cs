@@ -7,7 +7,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     abstract class FinderAttribute : Attribute
     {
         public string TypeName;
-        public static Dictionary<string, Blocks.Block> GetBlocks()
+        public static Dictionary<string, Blocks.Block> GetBlocks<T>() where T : FinderAttribute
         {
             var eventStarters = new Dictionary<string, Blocks.Block>();
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
@@ -16,7 +16,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
                 {
 
                     if (type.GetCustomAttribute(
-                        MethodBase.GetCurrentMethod().DeclaringType, false) is FinderAttribute atr)
+                        MethodBase.GetCurrentMethod().DeclaringType, false) is T atr)
                     {
                         if (!type.IsSubclassOf(typeof(Blocks.Block)))
                             throw new Exception(MethodBase.GetCurrentMethod().DeclaringType + " on class, which is not subclass of Block");
