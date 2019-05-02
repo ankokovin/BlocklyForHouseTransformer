@@ -9,4 +9,10 @@
     <ProjectReference Include="..\BlocklyForHouseTransformer\BlocklyForHouse.Transform.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="input.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
