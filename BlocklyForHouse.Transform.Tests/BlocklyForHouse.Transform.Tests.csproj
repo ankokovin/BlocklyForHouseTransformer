@@ -16,4 +16,10 @@
     <ProjectReference Include="..\BlocklyForHouseTransformer\BlocklyForHouse.Transform.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="HasEmpties\Inputs\AllEmpty.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

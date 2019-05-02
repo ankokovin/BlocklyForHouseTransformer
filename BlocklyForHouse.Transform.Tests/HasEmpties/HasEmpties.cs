@@ -11,7 +11,7 @@ namespace BlocklyForHouse.Transform.Tests
             public void AllEmpty()
             {
                 //arrange
-                string inputPath = @"C:\Users\user\Documents\Visual Studio 2017\Projects\BlocklyForHouseTransformer\BlocklyForHouse.Transform.Tests\HasEmpties\Inputs\AllEmpty.xml";
+                string inputPath = @"HasEmpties\Inputs\AllEmpty.xml";
                 string expected = string.Format(Literals.Import, Literals.PackageName) + '\n';
                 string name = "None";
                 expected += '\n';
