@@ -2,6 +2,9 @@
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// <para>&lt;block type=&quot;tem_get&quot;&gt;</para>
+    /// </summary>
     class GetTemperature : Block
     {
         public override string Interpret(ref XmlToPythonContext context)

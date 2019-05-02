@@ -4,8 +4,17 @@ using System.Reflection;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Values
 {
+    /// <summary>
+    /// <para>&lt;value type=&quot;event&quot;&gt;</para>
+    /// <para>used inside <see cref="Blocks.Script"/></para>
+    /// </summary>
     public class Event : Value
     {
+        /// <summary>
+        /// Interpret context as <see cref="Event"/>
+        /// </summary>
+        /// <param name="context">Context to interpret</param>
+        /// <returns>Python code</returns>
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

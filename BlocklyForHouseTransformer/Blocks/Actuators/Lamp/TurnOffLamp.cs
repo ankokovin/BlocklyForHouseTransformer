@@ -2,6 +2,10 @@
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;off_lamp&quot;&gt;</para>
+    /// /// </summary>
     [Custom_attributes.BodyCommand("off_lamp")]
     class TurnOffLamp : Block
     {

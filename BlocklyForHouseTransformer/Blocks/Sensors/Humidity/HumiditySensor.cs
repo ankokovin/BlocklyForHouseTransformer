@@ -4,6 +4,10 @@ using System.Text;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;hum_sensor&quot;&gt;</para>
+    /// </summary>
     class HumiditySensor : Block
     {
         public override string Interpret(ref XmlToPythonContext context)

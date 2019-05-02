@@ -2,6 +2,9 @@
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// <para>&lt;block type=&quot;il_sensor&quot;&gt;</para>
+    /// </summary>
     class IlluminanceSensor : Block
     {
         public override string Interpret(ref XmlToPythonContext context)

@@ -2,6 +2,10 @@
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;lamp_is_on&quot;&gt;</para>
+    /// </summary>
     [Custom_attributes.EventStarter("lamp_is_on")]
     class LampIsOn : Block
     {

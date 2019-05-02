@@ -4,9 +4,21 @@ using System.Reflection;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
 {
+    /// <summary>
+    /// Attribute for blocks, which should be found for detection
+    /// </summary>
     abstract class FinderAttribute : Attribute
     {
+        /// <summary>
+        /// value for "type" attribute inside xml block
+        /// </summary>
         public string TypeName;
+
+        /// <summary>
+        /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="FinderAttribute"/> T
+        /// </summary>
+        /// <typeparam name="T">Attribute, which implements <see cref="FinderAttribute"/></typeparam>
+        /// <returns>Dictionary of <see cref="Blocks.Block"/> with keys - <see cref="TypeName"/></returns>
         public static Dictionary<string, Blocks.Block> GetBlocks<T>() where T : FinderAttribute
         {
             var eventStarters = new Dictionary<string, Blocks.Block>();

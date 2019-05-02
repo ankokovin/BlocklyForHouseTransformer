@@ -4,6 +4,9 @@ using System.Text;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// <para>&lt;block type=&quot;temperature&quot;&gt;</para>
+    /// </summary>
     class Temperature : Block
     {
         public override string Interpret(ref XmlToPythonContext context)

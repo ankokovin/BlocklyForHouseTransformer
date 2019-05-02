@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>BlocklyForHouse.Transform</RootNamespace>
+    <ApplicationIcon />
+    <Win32Resource />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\user\Documents\Visual Studio 2017\Projects\BlocklyForHouseTransformer\BlocklyForHouseTransformer\BlocklyForHouseTransformer.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

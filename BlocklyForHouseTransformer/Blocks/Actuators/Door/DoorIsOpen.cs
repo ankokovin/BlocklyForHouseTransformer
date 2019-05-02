@@ -1,8 +1,17 @@
 ﻿namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
+    /// </summary>
     [Custom_attributes.EventStarterAttribute("door_is_open")]
     public class DoorIsOpen : Block
     {
+        /// <summary>
+        /// Interpret context as <see cref="DoorIsOpen"/>
+        /// </summary>
+        /// <param name="context">Context to interpret</param>
+        /// <returns>Python code</returns>
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

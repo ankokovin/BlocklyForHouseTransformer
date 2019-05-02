@@ -2,6 +2,10 @@
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
+    /// <summary>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;il_get&quot;&gt;</para>
+    /// /// </summary>
     class GetIlluminance : Block
     {
         public override string Interpret(ref XmlToPythonContext context)
