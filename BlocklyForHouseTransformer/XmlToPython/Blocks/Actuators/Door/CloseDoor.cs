@@ -2,12 +2,13 @@
 {
     /// <summary>
     /// For xml input:
-    /// <para>&lt;block type=&quot;door&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;close_door&quot;&gt;</para>
     /// </summary>
-    public class Door : Block
+    [Custom_attributes.BodyCommand("close_door")]
+    public class CloseDoor : Block
     {
         /// <summary>
-        /// Interpret context as <see cref="Door"/>
+        /// Interpret context as <see cref="CloseDoor"/>
         /// </summary>
         /// <param name="context">Context to interpret</param>
         /// <returns>Python code</returns>
@@ -15,8 +16,9 @@
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(Literals.Call,Literals.DoorCreate, (new Values.Name()).Interpret(ref context));
+            var result = (new Values.Door().Interpret(ref context)) + "."+LiteralsPython.DoorClose+"()";
             context.ParentNode();
+            context.NextCheck();
             return result;
         }
     }

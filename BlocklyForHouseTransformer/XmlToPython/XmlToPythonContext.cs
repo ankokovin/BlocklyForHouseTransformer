@@ -75,7 +75,7 @@ namespace BlocklyForHouse.Transform.XmlToPython
         /// <code>
         /// base.Interpret(ref context);
         /// context.NextNode();
-        /// var result = (new Values.Door().Interpret(ref context)) + &quot;.&quot; + Literals.DoorOpen + &quot;()&quot;;
+        /// var result = (new Values.Door().Interpret(ref context)) + &quot;.&quot; + LiteralsPython.DoorOpen + &quot;()&quot;;
         /// context.ParentNode();
         /// context.NextCheck();
         /// return result;

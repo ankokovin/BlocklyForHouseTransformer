@@ -14,7 +14,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(Literals.Call, Literals.LampCreate, (new Values.Name()).Interpret(ref context));
+            var result = string.Format(LiteralsPython.Call, LiteralsPython.LampCreate, (new Values.Name()).Interpret(ref context));
             context.ParentNode();
             return result;
         }

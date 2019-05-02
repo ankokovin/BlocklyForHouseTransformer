@@ -3,16 +3,16 @@
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     /// <summary>
-    /// <para>&lt;block type=&quot;tem_get&quot;&gt;</para>
+    /// For xml input:
+    /// <para>&lt;block type=&quot;humidity&quot;&gt;</para>
     /// </summary>
-    class GetTemperature : Block
+    class Humidity : Block
     {
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(Literals.Call, Literals.TemperatureGet, (new Values.TemperatureSensor()).Interpret(ref context));
-
+            var result =  string.Format(LiteralsPython.Call, LiteralsPython.Humidity, (new Field()).Interpret(ref context));
             context.ParentNode();
             return result;
         }

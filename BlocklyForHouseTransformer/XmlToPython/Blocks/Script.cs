@@ -17,7 +17,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
             base.Interpret(ref context);
             var node = context.currentNode;
             //add imports
-            string result = string.Format(Literals.Import,Literals.PackageName)+'\n';
+            string result = string.Format(LiteralsPython.Import,LiteralsPython.PackageName)+'\n';
             string ev = string.Empty;
             string body = string.Empty;
             string name = "None";
@@ -43,23 +43,23 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
             }
             //declare event of script
             result += '\n';
-            result += Literals.Event+"\n"+BlocklyTransformer.AddSpaces(1)+Literals.EventStart;
+            result += LiteralsPython.Event+"\n"+BlocklyTransformer.AddSpaces(1)+LiteralsPython.EventStart;
             if (string.IsNullOrEmpty(ev))
-                result += Literals.EmptyEvent;
+                result += LiteralsPython.EmptyEvent;
             else
                 result += ev;
 
             //declare body of script
             result += "\n\n";
-            result += Literals.Body + "\n";
+            result += LiteralsPython.Body + "\n";
             if (string.IsNullOrEmpty(body))
-                result += BlocklyTransformer.AddSpaces(1) + Literals.EmptyBody;
+                result += BlocklyTransformer.AddSpaces(1) + LiteralsPython.EmptyBody;
             else
                 result += body;
 
             //declare script with name, event and body
             result += '\n';
-            result += string.Format(Literals.AddScript, name);
+            result += string.Format(LiteralsPython.AddScript, name);
 
             return result;
         }

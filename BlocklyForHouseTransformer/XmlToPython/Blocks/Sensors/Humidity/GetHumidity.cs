@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     /// <summary>
     /// For xml input:
-    /// <para>&lt;block type=&quot;hum_sensor&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;hum_get&quot;&gt;</para>
     /// </summary>
-    class HumiditySensor : Block
+    class GetHumidity : Block
     {
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(Literals.Call, Literals.HumiditySensorCreate, (new Values.Name()).Interpret(ref context));
+            var result = string.Format(LiteralsPython.Call, LiteralsPython.HumidityGet, (new Values.HumiditySensor()).Interpret(ref context));
             context.ParentNode();
             return result;
         }

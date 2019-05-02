@@ -2,13 +2,13 @@
 {
     /// <summary>
     /// For xml input:
-    /// <para>&lt;block type=&quot;open_door&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BodyCommand("open_door")]
-    public class OpenDoor : Block
+    [Custom_attributes.EventStarterAttribute("door_is_open")]
+    public class DoorIsOpen : Block
     {
         /// <summary>
-        /// Interpret context as <see cref="OpenDoor"/>
+        /// Interpret context as <see cref="DoorIsOpen"/>
         /// </summary>
         /// <param name="context">Context to interpret</param>
         /// <returns>Python code</returns>
@@ -16,9 +16,8 @@
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = (new Values.Door().Interpret(ref context)) + "."+Literals.DoorOpen+"()";
+            var result = (new Values.Door().Interpret(ref context)) + "."+LiteralsPython.DoorIsOpen+"()";
             context.ParentNode();
-            context.NextCheck();
             return result;
         }
     }

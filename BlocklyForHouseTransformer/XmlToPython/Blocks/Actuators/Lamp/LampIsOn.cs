@@ -4,15 +4,16 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     /// <summary>
     /// For xml input:
-    /// <para>&lt;block type=&quot;humidity&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;lamp_is_on&quot;&gt;</para>
     /// </summary>
-    class Humidity : Block
+    [Custom_attributes.EventStarter("lamp_is_on")]
+    class LampIsOn : Block
     {
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result =  string.Format(Literals.Call, Literals.Humidity, (new Field()).Interpret(ref context));
+            var result = (new Values.Lamp().Interpret(ref context)) + "."+LiteralsPython.LampIsOn+"()\n";
             context.ParentNode();
             return result;
         }

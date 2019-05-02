@@ -1,21 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     /// <summary>
     /// For xml input:
-    /// <para>&lt;block type=&quot;on_lamp&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;illuminance&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BodyCommand("on_lamp")]
-    class TurnOnLamp : Block
+    class Illuminance : Block
     {
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result =  (new Values.Lamp().Interpret(ref context)) + "."+Literals.LampOn+"()";
+            var result = string.Format(LiteralsPython.Call, LiteralsPython.Illuminance, (new Field()).Interpret(ref context));
             context.ParentNode();
-            context.NextCheck();
             return result;
         }
     }

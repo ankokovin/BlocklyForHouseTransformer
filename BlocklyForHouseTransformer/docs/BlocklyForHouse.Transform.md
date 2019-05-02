@@ -859,7 +859,7 @@ And here is the use of <a href="#xmltopythoncontext.nextcheck">XmlToPythonContex
 
             base.Interpret(ref context);
             context.NextNode();
-            var result = (new Values.Door().Interpret(ref context)) + "." + Literals.DoorOpen + "()";
+            var result = (new Values.Door().Interpret(ref context)) + "." + LiteralsPython.DoorOpen + "()";
             context.ParentNode();
             context.NextCheck();
             return result;

@@ -10,18 +10,19 @@ namespace BlocklyForHouse.Transform.Tests
             [TestMethod]
             public void AllEmpty()
             {
+                
                 //arrange
                 string inputPath = @"HasEmpties\Inputs\AllEmpty.xml";
-                string expected = string.Format(Literals.Import, Literals.PackageName) + '\n';
+                string expected = string.Format(LiteralsPython.Import, LiteralsPython.PackageName) + '\n';
                 string name = "None";
                 expected += '\n';
-                expected += Literals.Event + "\n" + BlocklyTransformer.AddSpaces(1) + Literals.EventStart;
-                expected += Literals.EmptyEvent;
+                expected += LiteralsPython.Event + "\n" + BlocklyTransformer.AddSpaces(1) + LiteralsPython.EventStart;
+                expected += LiteralsPython.EmptyEvent;
                 expected += "\n\n";
-                expected += Literals.Body + "\n";
-                expected += BlocklyTransformer.AddSpaces(1) + Literals.EmptyBody;
+                expected += LiteralsPython.Body + "\n";
+                expected += BlocklyTransformer.AddSpaces(1) + LiteralsPython.EmptyBody;
                 expected += '\n';
-                expected += string.Format(Literals.AddScript, name);
+                expected += string.Format(LiteralsPython.AddScript, name);
 
                 //act
                 var actual = TestOne(ReadXmlInput(inputPath));
