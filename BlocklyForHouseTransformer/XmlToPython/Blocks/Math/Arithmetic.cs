@@ -29,10 +29,12 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
                         OP = new Field().Interpret(ref context);
                         break;
                     case "A":
-                        A = new Number().Interpret(ref context);
+                        context.NextNode();
+                        A = Blocks[context.currentNode.Attributes["type"].Value].Interpret(ref context);
                         break;
                     case "B":
-                        B = new Number().Interpret(ref context);
+                        context.NextNode();
+                        B = Blocks[context.currentNode.Attributes["type"].Value].Interpret(ref context);
                         break;
                     default:
                         throw new System.Exception();
@@ -52,5 +54,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
             ["DIVIDE"] = "/",
             ["POWER"] = "**",
         };
+
+        private readonly Dictionary<string, Block> Blocks =
+            Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.NumberAttribute>();
     }
 }
