@@ -14,6 +14,12 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
         /// </summary>
         public string TypeName;
 
+        public FinderAttribute(string typename)
+        {
+            TypeName = typename;
+        }
+
+
         /// <summary>
         /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="FinderAttribute"/> T
         /// </summary>

@@ -11,10 +11,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     {
         
         public BodyCommandAttribute(string typeName)
-        {
-            this.TypeName = typeName;
-            
-        }
+            :base(typeName)
+        {}
         
     }
 }

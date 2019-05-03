@@ -11,9 +11,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     sealed class BoolneanAttribute : FinderAttribute
     {
         public BoolneanAttribute(string typename)
-        {
-            TypeName = typename;
-        }        
+            :base(typename)
+        {}        
     }
 
 
