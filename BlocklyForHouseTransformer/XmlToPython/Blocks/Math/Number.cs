@@ -1,14 +1,16 @@
-﻿namespace BlocklyForHouse.Transform.XmlToPython.Blocks
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
 {
     /// <summary>
-    /// For xml input:
-    /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
+    /// <para>&lt;block type=&quot;math_number&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BoolneanAttribute("door_is_open")]
-    public class DoorIsOpen : Block
+    public class Number : Block
     {
         /// <summary>
-        /// Interpret context as <see cref="DoorIsOpen"/>
+        /// Interpret context as <see cref="Number"/>
         /// </summary>
         /// <param name="context">Context to interpret</param>
         /// <returns>Python code</returns>
@@ -16,7 +18,7 @@
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = (new Values.Door().Interpret(ref context)) + "."+LiteralsPython.DoorIsOpen+"()";
+            var result = new Field().Interpret(ref context);
             context.ParentNode();
             return result;
         }

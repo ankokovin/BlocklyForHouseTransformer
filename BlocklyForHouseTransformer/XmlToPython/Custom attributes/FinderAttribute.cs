@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
@@ -14,6 +15,12 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
         /// </summary>
         public string TypeName;
 
+        public FinderAttribute(string typename)
+        {
+            TypeName = typename;
+        }
+
+
         /// <summary>
         /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="FinderAttribute"/> T
         /// </summary>
@@ -26,16 +33,14 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
             {
                 foreach (var type in assembly.GetTypes())
                 {
-
-                    if (type.GetCustomAttribute(
-                        MethodBase.GetCurrentMethod().DeclaringType, false) is T atr)
+                    var atr = type.GetCustomAttributes().Where(x => x is T).FirstOrDefault() as T;
+                    if (atr != null)
                     {
                         if (!type.IsSubclassOf(typeof(Blocks.Block)))
                             throw new Exception(MethodBase.GetCurrentMethod().DeclaringType + " on class, which is not subclass of Block");
                         eventStarters.Add(atr.TypeName, Activator.CreateInstance(type) as Blocks.Block);
                     }
                 }
-
             }
             return eventStarters;
         }
