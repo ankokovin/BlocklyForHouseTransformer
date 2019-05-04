@@ -10,7 +10,6 @@
         public override string TypeName => TypeLiteralsXml.CloseDoor;
 
         protected override string FunctionLiteral => LiteralsPython.DoorClose;
-
-        protected override bool NeedNextCheck => true;
+        
     }
 }

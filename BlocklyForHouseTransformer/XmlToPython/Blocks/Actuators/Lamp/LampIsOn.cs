@@ -13,7 +13,6 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         public override string TypeName => TypeLiteralsXml.LampIsOn;
 
         protected override string FunctionLiteral => LiteralsPython.LampIsOn;
-
-        protected override bool NeedNextCheck => false;
+        
     }
 }

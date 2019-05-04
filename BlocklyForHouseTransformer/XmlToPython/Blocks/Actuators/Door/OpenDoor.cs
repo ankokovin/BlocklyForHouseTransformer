@@ -11,7 +11,6 @@
         public override string TypeName => TypeLiteralsXml.OpenDoor;
 
         protected override string FunctionLiteral => LiteralsPython.DoorOpen;
-
-        protected override bool NeedNextCheck => true;
+        
     }
 }
