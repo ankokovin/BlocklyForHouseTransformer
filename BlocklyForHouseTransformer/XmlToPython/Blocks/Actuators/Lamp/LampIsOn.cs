@@ -6,7 +6,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// For xml input:
     /// <para>&lt;block type=&quot;lamp_is_on&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BoolneanAttribute("lamp_is_on")]
+    [Custom_attributes.Boolean("lamp_is_on")]
     class LampIsOn : Block
     {
         public override string Interpret(ref XmlToPythonContext context)

@@ -8,9 +8,9 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     /// <para>Block classes are caught in <see cref="Values.Event"/> with <see cref="XmlTypeAttribute.GetBlocks"/></para>
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    sealed class BoolneanAttribute : XmlTypeAttribute
+    sealed class BooleanAttribute : XmlTypeAttribute
     {
-        public BoolneanAttribute( )
+        public BooleanAttribute( )
             :base()
         {}        
     }

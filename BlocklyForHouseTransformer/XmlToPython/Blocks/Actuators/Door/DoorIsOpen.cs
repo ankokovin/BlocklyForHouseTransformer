@@ -4,7 +4,7 @@
     /// For xml input:
     /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BoolneanAttribute("door_is_open")]
+    [Custom_attributes.Boolean("door_is_open")]
     public class DoorIsOpen : Block
     {
         /// <summary>
