@@ -260,5 +260,9 @@ paket-files/
 __pycache__/
 *.pyc
 
+<<<<<<< HEAD
 # vs code
+=======
+# ignore .vscode
+>>>>>>> e830dd1ecf9f26cab8b951cf99f845be3ff7a7ad
 .vscode
