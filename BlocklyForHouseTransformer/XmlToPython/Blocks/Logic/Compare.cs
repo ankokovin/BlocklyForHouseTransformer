@@ -64,8 +64,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Logic
         };
 
         private readonly Dictionary<string, Block> ComBlocks =
-            Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.ComparableAttribute>();
+            Custom_attributes.XmlTypeAttribute.GetBlocks<Custom_attributes.ComparableAttribute>();
         private readonly Dictionary<string, Block> EqBlocks =
-            Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.EquitableAttribute>();
+            Custom_attributes.XmlTypeAttribute.GetBlocks<Custom_attributes.EquitableAttribute>();
     }
 }

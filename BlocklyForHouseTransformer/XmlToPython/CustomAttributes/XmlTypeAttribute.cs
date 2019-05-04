@@ -8,25 +8,17 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     /// <summary>
     /// Attribute for blocks, which should be found for detection
     /// </summary>
-    abstract class FinderAttribute : Attribute
+    abstract class XmlTypeAttribute : Attribute 
     {
-        /// <summary>
-        /// value for "type" attribute inside xml block
-        /// </summary>
-        public string TypeName;
 
-        public FinderAttribute(string typename)
-        {
-            TypeName = typename;
-        }
 
 
         /// <summary>
-        /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="FinderAttribute"/> T
+        /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="XmlTypeAttribute"/> T
         /// </summary>
-        /// <typeparam name="T">Attribute, which implements <see cref="FinderAttribute"/></typeparam>
+        /// <typeparam name="T">Attribute, which implements <see cref="XmlTypeAttribute"/></typeparam>
         /// <returns>Dictionary of <see cref="Blocks.Block"/> with keys - <see cref="TypeName"/></returns>
-        public static Dictionary<string, Blocks.Block> GetBlocks<T>() where T : FinderAttribute
+        public static Dictionary<string, Blocks.Block> GetBlocks<T>() where T : XmlTypeAttribute
         {
             var eventStarters = new Dictionary<string, Blocks.Block>();
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())

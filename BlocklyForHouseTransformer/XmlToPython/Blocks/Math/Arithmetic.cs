@@ -56,6 +56,6 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
         };
 
         private readonly Dictionary<string, Block> Blocks =
-            Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.NumberAttribute>();
+            Custom_attributes.XmlTypeAttribute.GetBlocks<Custom_attributes.NumberAttribute>();
     }
 }

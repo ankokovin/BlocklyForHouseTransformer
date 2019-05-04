@@ -6,8 +6,8 @@
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     class ComparableAttribute : EquitableAttribute
     {
-        public ComparableAttribute(string typename)
-            :base(typename)
+        public ComparableAttribute( )
+            :base()
         {}
     }
 }
