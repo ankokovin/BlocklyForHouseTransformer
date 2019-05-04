@@ -14,9 +14,11 @@
 
         /// <summary>
         /// Is it needed to call <see cref="XmlToPythonContext.NextCheck"/>
-        /// <para>Intended use - put constant value</para>
+        /// <para>By default it is set to true only if block has attribute <see cref="Custom_attributes.BodyCommandAttribute"/></para>
         /// </summary>
-        protected abstract bool NeedNextCheck { get; }
+        protected virtual bool NeedNextCheck => 
+            GetType().GetCustomAttributes(typeof(Custom_attributes.BodyCommandAttribute),false).Length == 1;
+
 
         /// <summary>
         /// Interpret context as <see cref="MethodCallBlock{InputValueType}"/>
@@ -35,4 +37,6 @@
         }
 
     }
+
+
 }
