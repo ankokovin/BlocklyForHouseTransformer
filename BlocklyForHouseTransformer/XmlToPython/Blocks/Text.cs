@@ -7,6 +7,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// </summary>
     public class Text : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Text;
         /// <summary>
         /// Interpret context as <see cref="Text"/>
         /// </summary>

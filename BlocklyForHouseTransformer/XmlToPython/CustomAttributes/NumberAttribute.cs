@@ -1,13 +1,13 @@
 ﻿namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
 {
     /// <summary>
-    /// for blocks, that can be checked if they are equal
+    /// Attribute for blocks, that return numeric value 
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    class EquitableAttribute : FinderAttribute
+    sealed class NumberAttribute : ComparableAttribute
     {
-        public EquitableAttribute(string typename)
-            :base(typename)
+        public NumberAttribute( )
+            :base()
         {}
     }
 }

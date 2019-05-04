@@ -4,21 +4,13 @@
     /// For xml input:
     /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BoolneanAttribute("door_is_open")]
-    public class DoorIsOpen : Block
+    [Custom_attributes.Boolean]
+    public class DoorIsOpen : MethodCallBlock<Values.Door>
     {
-        /// <summary>
-        /// Interpret context as <see cref="DoorIsOpen"/>
-        /// </summary>
-        /// <param name="context">Context to interpret</param>
-        /// <returns>Python code</returns>
-        public override string Interpret(ref XmlToPythonContext context)
-        {
-            base.Interpret(ref context);
-            context.NextNode();
-            var result = (new Values.Door().Interpret(ref context)) + "."+LiteralsPython.DoorIsOpen+"()";
-            context.ParentNode();
-            return result;
-        }
+
+        public override string TypeName => TypeLiteralsXml.DoorIsOpen;
+
+        protected override string FunctionLiteral => LiteralsPython.DoorIsOpen;
+
     }
 }

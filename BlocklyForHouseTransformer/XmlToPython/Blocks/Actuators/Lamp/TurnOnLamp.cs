@@ -6,17 +6,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// For xml input:
     /// <para>&lt;block type=&quot;on_lamp&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BodyCommand("on_lamp")]
-    class TurnOnLamp : Block
+    [Custom_attributes.BodyCommand]
+    class TurnOnLamp : MethodCallBlock<Values.Lamp>
     {
-        public override string Interpret(ref XmlToPythonContext context)
-        {
-            base.Interpret(ref context);
-            context.NextNode();
-            var result =  (new Values.Lamp().Interpret(ref context)) + "."+LiteralsPython.LampOn+"()";
-            context.ParentNode();
-            context.NextCheck();
-            return result;
-        }
+
+        public override string TypeName => TypeLiteralsXml.TurnOnLamp;
+
+        protected override string FunctionLiteral => LiteralsPython.LampOn;
+        
     }
 }

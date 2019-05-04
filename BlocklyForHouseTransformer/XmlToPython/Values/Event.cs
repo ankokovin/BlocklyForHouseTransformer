@@ -33,8 +33,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Values
             {
                 if (eventStarters == null)
                 {
-                    eventStarters = Custom_attributes.FinderAttribute
-                        .GetBlocks<Custom_attributes.BoolneanAttribute>();
+                    eventStarters = Custom_attributes.XmlTypeAttribute
+                        .GetBlocks<Custom_attributes.BooleanAttribute>();
                 }
                 return eventStarters;
             }

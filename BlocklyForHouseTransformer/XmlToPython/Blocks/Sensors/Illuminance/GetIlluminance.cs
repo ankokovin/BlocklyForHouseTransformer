@@ -6,15 +6,12 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// For xml input:
     /// <para>&lt;block type=&quot;il_get&quot;&gt;</para>
     /// /// </summary>
-    class GetIlluminance : Block
+    class GetIlluminance : FunctionCallBlock<Values.IlluminanceSensor>
     {
-        public override string Interpret(ref XmlToPythonContext context)
-        {
-            base.Interpret(ref context);
-            context.NextNode();
-            var result =  string.Format(LiteralsPython.Call, LiteralsPython.IlluminanceGet, (new Values.IlluminanceSensor()).Interpret(ref context));
-            context.ParentNode();
-            return result;
-        }
+
+        public override string TypeName => TypeLiteralsXml.GetIlluminance;
+
+        protected override string FunctionLiteral => LiteralsPython.IlluminanceGet;
+
     }
 }

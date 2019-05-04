@@ -8,6 +8,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
     /// </summary>
     public class Arithmetic : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Arithmetic;
         /// <summary>
         /// Interpret context as <see cref="Arithmetic"/>
         /// </summary>
@@ -56,6 +58,6 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
         };
 
         private readonly Dictionary<string, Block> Blocks =
-            Custom_attributes.FinderAttribute.GetBlocks<Custom_attributes.NumberAttribute>();
+            Custom_attributes.XmlTypeAttribute.GetBlocks<Custom_attributes.NumberAttribute>();
     }
 }
