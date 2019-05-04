@@ -123,9 +123,6 @@
   <data name="Body" xml:space="preserve">
     <value>def body():</value>
   </data>
-  <data name="Call" xml:space="preserve">
-    <value>{0}({1})</value>
-  </data>
   <data name="DoorClose" xml:space="preserve">
     <value>close</value>
   </data>
@@ -149,6 +146,9 @@
   </data>
   <data name="EventStart" xml:space="preserve">
     <value>return </value>
+  </data>
+  <data name="FunctionCall" xml:space="preserve">
+    <value>{0}({1})</value>
   </data>
   <data name="Humidity" xml:space="preserve">
     <value>humidity</value>
@@ -182,6 +182,9 @@
   </data>
   <data name="LampOn" xml:space="preserve">
     <value>on</value>
+  </data>
+  <data name="MethodCall" xml:space="preserve">
+    <value>{0}.{1}()</value>
   </data>
   <data name="PackageName" xml:space="preserve">
     <value>BlocklyForHousePy</value>

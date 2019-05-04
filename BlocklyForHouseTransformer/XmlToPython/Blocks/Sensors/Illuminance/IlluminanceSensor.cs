@@ -14,7 +14,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
             base.Interpret(ref context);
             context.NextNode();
             
-            var result = string.Format(LiteralsPython.Call, LiteralsPython.IlluminanceSensorCreate, (new Values.Name()).Interpret(ref context));
+            var result = string.Format(LiteralsPython.FunctionCall, LiteralsPython.IlluminanceSensorCreate, (new Values.Name()).Interpret(ref context));
 
             context.ParentNode();
             return result;

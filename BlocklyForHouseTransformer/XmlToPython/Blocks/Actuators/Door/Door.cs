@@ -17,7 +17,7 @@
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(LiteralsPython.Call,LiteralsPython.DoorCreate, (new Values.Name()).Interpret(ref context));
+            var result = string.Format(LiteralsPython.FunctionCall,LiteralsPython.DoorCreate, (new Values.Name()).Interpret(ref context));
             context.ParentNode();
             return result;
         }

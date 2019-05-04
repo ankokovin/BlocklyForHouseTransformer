@@ -79,15 +79,6 @@ namespace BlocklyForHouse.Transform {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на {0}({1}).
-        /// </summary>
-        public static string Call {
-            get {
-                return ResourceManager.GetString("Call", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на close.
         /// </summary>
         public static string DoorClose {
@@ -156,6 +147,15 @@ namespace BlocklyForHouse.Transform {
         public static string EventStart {
             get {
                 return ResourceManager.GetString("EventStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {0}({1}).
+        /// </summary>
+        public static string FunctionCall {
+            get {
+                return ResourceManager.GetString("FunctionCall", resourceCulture);
             }
         }
         
@@ -255,6 +255,15 @@ namespace BlocklyForHouse.Transform {
         public static string LampOn {
             get {
                 return ResourceManager.GetString("LampOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {0}.{1}().
+        /// </summary>
+        public static string MethodCall {
+            get {
+                return ResourceManager.GetString("MethodCall", resourceCulture);
             }
         }
         

@@ -49,11 +49,6 @@
               Ищет локализованную строку, похожую на def body():.
             </summary>
         </member>
-        <member name="P:BlocklyForHouse.Transform.LiteralsPython.Call">
-            <summary>
-              Ищет локализованную строку, похожую на {0}({1}).
-            </summary>
-        </member>
         <member name="P:BlocklyForHouse.Transform.LiteralsPython.DoorClose">
             <summary>
               Ищет локализованную строку, похожую на close.
@@ -92,6 +87,11 @@
         <member name="P:BlocklyForHouse.Transform.LiteralsPython.EventStart">
             <summary>
               Ищет локализованную строку, похожую на return .
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.LiteralsPython.FunctionCall">
+            <summary>
+              Ищет локализованную строку, похожую на {0}({1}).
             </summary>
         </member>
         <member name="P:BlocklyForHouse.Transform.LiteralsPython.Humidity">
@@ -149,6 +149,11 @@
               Ищет локализованную строку, похожую на on.
             </summary>
         </member>
+        <member name="P:BlocklyForHouse.Transform.LiteralsPython.MethodCall">
+            <summary>
+              Ищет локализованную строку, похожую на {0}.{1}().
+            </summary>
+        </member>
         <member name="P:BlocklyForHouse.Transform.LiteralsPython.PackageName">
             <summary>
               Ищет локализованную строку, похожую на BlocklyForHousePy.
@@ -169,6 +174,132 @@
               Ищет локализованную строку, похожую на tem_sensor.
             </summary>
         </member>
+        <member name="T:BlocklyForHouse.Transform.TypeLiteralsXml">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Arithmetic">
+            <summary>
+              Ищет локализованную строку, похожую на math_arithmetic.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.CloseDoor">
+            <summary>
+              Ищет локализованную строку, похожую на close_door.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Compare">
+            <summary>
+              Ищет локализованную строку, похожую на logic_compare.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Door">
+            <summary>
+              Ищет локализованную строку, похожую на door.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.DoorIsOpen">
+            <summary>
+              Ищет локализованную строку, похожую на door_is_open.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.GetHumidity">
+            <summary>
+              Ищет локализованную строку, похожую на hum_get.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.GetIlluminance">
+            <summary>
+              Ищет локализованную строку, похожую на il_get.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.GetTemperature">
+            <summary>
+              Ищет локализованную строку, похожую на tem_get.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Humidity">
+            <summary>
+              Ищет локализованную строку, похожую на humidity.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.HumiditySensor">
+            <summary>
+              Ищет локализованную строку, похожую на hum_sensor.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Illuminance">
+            <summary>
+              Ищет локализованную строку, похожую на illuminance.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.IlluminanceSensor">
+            <summary>
+              Ищет локализованную строку, похожую на il_sensor.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Lamp">
+            <summary>
+              Ищет локализованную строку, похожую на lamp.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.LampIsOn">
+            <summary>
+              Ищет локализованную строку, похожую на lamp_is_on.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Number">
+            <summary>
+              Ищет локализованную строку, похожую на math_number.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.OpenDoor">
+            <summary>
+              Ищет локализованную строку, похожую на open_door.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Script">
+            <summary>
+              Ищет локализованную строку, похожую на script.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Temperature">
+            <summary>
+              Ищет локализованную строку, похожую на temperature.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.TemperatureSensor">
+            <summary>
+              Ищет локализованную строку, похожую на tem_sensor.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.Text">
+            <summary>
+              Ищет локализованную строку, похожую на text.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.TurnOffLamp">
+            <summary>
+              Ищет локализованную строку, похожую на off_lamp.
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.TypeLiteralsXml.TurnOnLamp">
+            <summary>
+              Ищет локализованную строку, похожую на on_lamp.
+            </summary>
+        </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.AbstractExpression">
             <summary>
             abstraction of expressions inside xml input
@@ -186,13 +317,6 @@
             For xml input:
             <para>&lt;block type=&quot;close_door&quot;&gt;</para>
             </summary>
-        </member>
-        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.CloseDoor.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
-            <summary>
-            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.CloseDoor"/>
-            </summary>
-            <param name="context">Context to interpret</param>
-            <returns>Python code</returns>
         </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Door">
             <summary>
@@ -226,13 +350,6 @@
             <para>&lt;block type=&quot;open_door&quot;&gt;</para>
             </summary>
         </member>
-        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.OpenDoor.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
-            <summary>
-            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.OpenDoor"/>
-            </summary>
-            <param name="context">Context to interpret</param>
-            <returns>Python code</returns>
-        </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Lamp">
             <summary>
             For xml input:
@@ -262,9 +379,62 @@
             <para>&lt;block type=&quot;...&quot;&gt;</para>
             </summary>
         </member>
+        <member name="P:BlocklyForHouse.Transform.XmlToPython.Blocks.Block.TypeName">
+            <summary>
+            Name of the type attribute of block
+            </summary>
+        </member>
         <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.Block.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
             <summary>
             Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/>
+            </summary>
+            <param name="context">Context to interpret</param>
+            <returns>Python code</returns>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Arithmetic">
+            <summary>
+            <para>&lt;block type=&quot;math_arithmetic&quot;&gt;</para>
+            </summary>
+        </member>
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Arithmetic.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
+            <summary>
+            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Arithmetic"/>
+            </summary>
+            <param name="context">Context to interpret</param>
+            <returns>Python code</returns>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Number">
+            <summary>
+            <para>&lt;block type=&quot;math_number&quot;&gt;</para>
+            </summary>
+        </member>
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Number.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
+            <summary>
+            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Number"/>
+            </summary>
+            <param name="context">Context to interpret</param>
+            <returns>Python code</returns>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1">
+            <summary>
+            Class of block which are simple function calls
+            </summary>
+            <typeparam name="InputValueType">Input value type</typeparam>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1.FunctionLiteral">
+            <summary>
+            Literal for function
+            </summary>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1.NeedNextCheck">
+            <summary>
+            Is it needed to call <see cref="M:BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext.NextCheck"/>
+            <para>Intended use - put constant value</para>
+            </summary>
+        </member>
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
+            <summary>
+            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1"/>
             </summary>
             <param name="context">Context to interpret</param>
             <returns>Python code</returns>
@@ -351,31 +521,42 @@
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.BodyCommandAttribute">
             <summary>
             Attribute for blocks, used as commands inside the body of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Script"/>
-            <para>Block classes are caught in <see cref="T:BlocklyForHouse.Transform.XmlToPython.Statements.Body"/> with <see cref="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.GetBlocks``1"/></para>
+            <para>Block classes are caught in <see cref="T:BlocklyForHouse.Transform.XmlToPython.Statements.Body"/> with <see cref="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute.GetBlocks``1"/></para>
             </summary>
         </member>
-        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.EventStarterAttribute">
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.BooleanAttribute">
             <summary>
-            Attribute for blocks, used as triggers for <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Script"/>
-            <para>Block classes are caught in <see cref="T:BlocklyForHouse.Transform.XmlToPython.Values.Event"/> with <see cref="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.GetBlocks``1"/></para>
+            Attribute for blocks, that return boolean value 
+            <para>used as triggers for <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Script"/></para>
+            <para>Block classes are caught in <see cref="T:BlocklyForHouse.Transform.XmlToPython.Values.Event"/> with <see cref="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute.GetBlocks``1"/></para>
             </summary>
         </member>
-        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute">
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.ComparableAttribute">
+            <summary>
+            for blocks, that can be compared
+            </summary>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.EquitableAttribute">
+            <summary>
+            for blocks, that can be checked if they are equal
+            </summary>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.NumberAttribute">
+            <summary>
+            Attribute for blocks, that return numeric value 
+            </summary>
+        </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute">
             <summary>
             Attribute for blocks, which should be found for detection
             </summary>
         </member>
-        <member name="F:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.TypeName">
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute.GetBlocks``1">
             <summary>
-            value for "type" attribute inside xml block
+            Find all classes of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/> with some <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute"/> T
             </summary>
-        </member>
-        <member name="M:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.GetBlocks``1">
-            <summary>
-            Find all classes of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/> with some <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute"/> T
-            </summary>
-            <typeparam name="T">Attribute, which implements <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute"/></typeparam>
-            <returns>Dictionary of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/> with keys - <see cref="F:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.FinderAttribute.TypeName"/></returns>
+            <typeparam name="T">Attribute, which implements <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.XmlTypeAttribute"/></typeparam>
+            <returns>Dictionary of <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Block"/> with keys - <see cref="P:BlocklyForHouse.Transform.XmlToPython.Blocks.Block.TypeName"/></returns>
         </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Field">
             <summary>
@@ -610,7 +791,7 @@
                 + (Blocks[context.currentNode.Attributes[&quot;type&quot;].Value]).Interpret(ref context) + &quot;\n&quot;;
             } while (prev!=context.currentNode);
             </code>
-            And here is the use of <see cref="M:BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext.NextCheck"/> in <see cref="M:BlocklyForHouse.Transform.XmlToPython.Blocks.OpenDoor.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)"/>:
+            And here is the use of <see cref="M:BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext.NextCheck"/> in <see cref="!:Blocks.OpenDoor.Interpret(ref XmlToPythonContext)"/>:
             <code>
             base.Interpret(ref context);
             context.NextNode();

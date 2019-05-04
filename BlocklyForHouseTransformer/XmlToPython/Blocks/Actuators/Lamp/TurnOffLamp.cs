@@ -7,18 +7,13 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// <para>&lt;block type=&quot;off_lamp&quot;&gt;</para>
     /// /// </summary>
     [Custom_attributes.BodyCommand]
-    class TurnOffLamp : Block
+    class TurnOffLamp : MethodCallBlock<Values.Lamp>
     {
 
         public override string TypeName => TypeLiteralsXml.TurnOffLamp;
-        public override string Interpret(ref XmlToPythonContext context)
-        {
-            base.Interpret(ref context);
-            context.NextNode();
-            var result = (new Values.Lamp().Interpret(ref context)) + "."+LiteralsPython.LampOff+"()";
-            context.ParentNode();
-            context.NextCheck();
-            return result;
-        }
+
+        protected override string FunctionLiteral => LiteralsPython.LampOff;
+
+        protected override bool NeedNextCheck => true;
     }
 }

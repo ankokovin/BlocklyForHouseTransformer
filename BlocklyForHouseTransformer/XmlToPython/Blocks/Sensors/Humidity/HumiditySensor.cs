@@ -16,7 +16,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(LiteralsPython.Call, LiteralsPython.HumiditySensorCreate, (new Values.Name()).Interpret(ref context));
+            var result = string.Format(LiteralsPython.FunctionCall, LiteralsPython.HumiditySensorCreate, (new Values.Name()).Interpret(ref context));
             context.ParentNode();
             return result;
         }
