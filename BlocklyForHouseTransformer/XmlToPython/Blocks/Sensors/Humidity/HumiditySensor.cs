@@ -8,17 +8,12 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// For xml input:
     /// <para>&lt;block type=&quot;hum_sensor&quot;&gt;</para>
     /// </summary>
-    class HumiditySensor : Block
+    class HumiditySensor : FunctionCallBlock<Values.Name>
     {
 
         public override string TypeName => TypeLiteralsXml.HumiditySensor;
-        public override string Interpret(ref XmlToPythonContext context)
-        {
-            base.Interpret(ref context);
-            context.NextNode();
-            var result = string.Format(LiteralsPython.FunctionCall, LiteralsPython.HumiditySensorCreate, (new Values.Name()).Interpret(ref context));
-            context.ParentNode();
-            return result;
-        }
+
+        protected override string FunctionLiteral => LiteralsPython.HumiditySensorCreate;
+
     }
 }
