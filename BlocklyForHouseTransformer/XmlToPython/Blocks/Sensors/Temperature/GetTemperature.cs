@@ -5,6 +5,7 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// <summary>
     /// <para>&lt;block type=&quot;tem_get&quot;&gt;</para>
     /// </summary>
+    [Custom_attributes.Comparable]
     class GetTemperature : FunctionCallBlock<Values.TemperatureSensor>
     {
 

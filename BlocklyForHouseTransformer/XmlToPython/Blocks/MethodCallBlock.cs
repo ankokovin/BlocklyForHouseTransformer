@@ -1,7 +1,7 @@
 ﻿namespace BlocklyForHouse.Transform.XmlToPython.Blocks
 {
     /// <summary>
-    /// Class of block which are simple function calls
+    /// Class of block which are simple method calls
     /// </summary>
     /// <typeparam name="InputValueType">Input value type</typeparam>
     public abstract class MethodCallBlock<InputValueType> : Block

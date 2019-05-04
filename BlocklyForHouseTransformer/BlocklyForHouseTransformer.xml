@@ -324,25 +324,11 @@
             <para>&lt;block type=&quot;door&quot;&gt;</para>
             </summary>
         </member>
-        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.Door.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
-            <summary>
-            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Door"/>
-            </summary>
-            <param name="context">Context to interpret</param>
-            <returns>Python code</returns>
-        </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.DoorIsOpen">
             <summary>
             For xml input:
             <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
             </summary>
-        </member>
-        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.DoorIsOpen.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
-            <summary>
-            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.DoorIsOpen"/>
-            </summary>
-            <param name="context">Context to interpret</param>
-            <returns>Python code</returns>
         </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.OpenDoor">
             <summary>
@@ -391,6 +377,24 @@
             <param name="context">Context to interpret</param>
             <returns>Python code</returns>
         </member>
+        <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.FunctionCallBlock`1">
+            <summary>
+            Class of block which are simple function calls
+            </summary>
+            <typeparam name="InputValueType">Input value type</typeparam>
+        </member>
+        <member name="P:BlocklyForHouse.Transform.XmlToPython.Blocks.FunctionCallBlock`1.FunctionLiteral">
+            <summary>
+            Literal for function
+            </summary>
+        </member>
+        <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.FunctionCallBlock`1.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">
+            <summary>
+            Interpret context as <see cref="T:BlocklyForHouse.Transform.XmlToPython.Blocks.FunctionCallBlock`1"/>
+            </summary>
+            <param name="context">Context to interpret</param>
+            <returns>Python code</returns>
+        </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.Math.Arithmetic">
             <summary>
             <para>&lt;block type=&quot;math_arithmetic&quot;&gt;</para>
@@ -417,7 +421,7 @@
         </member>
         <member name="T:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1">
             <summary>
-            Class of block which are simple function calls
+            Class of block which are simple method calls
             </summary>
             <typeparam name="InputValueType">Input value type</typeparam>
         </member>
@@ -429,7 +433,7 @@
         <member name="P:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1.NeedNextCheck">
             <summary>
             Is it needed to call <see cref="M:BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext.NextCheck"/>
-            <para>Intended use - put constant value</para>
+            <para>By default it is set to true only if block has attribute <see cref="T:BlocklyForHouse.Transform.XmlToPython.Custom_attributes.BodyCommandAttribute"/></para>
             </summary>
         </member>
         <member name="M:BlocklyForHouse.Transform.XmlToPython.Blocks.MethodCallBlock`1.Interpret(BlocklyForHouse.Transform.XmlToPython.XmlToPythonContext@)">

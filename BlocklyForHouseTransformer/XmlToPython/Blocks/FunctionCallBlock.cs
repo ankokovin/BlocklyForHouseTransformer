@@ -21,7 +21,7 @@
         {
             base.Interpret(ref context);
             context.NextNode();
-            var result = string.Format(LiteralsPython.FunctionCall, (new InputValueType()).Interpret(ref context), FunctionLiteral);
+            var result = string.Format(LiteralsPython.FunctionCall, FunctionLiteral, (new InputValueType()).Interpret(ref context));
             context.ParentNode();
             return result;
         }
