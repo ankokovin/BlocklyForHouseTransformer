@@ -27,9 +27,9 @@ namespace BlocklyForHouse.Transform.ConsoleClient
                         OutputResult(s, Parse(ReadInput()));
                     }
                 }
-                else if (args[0].StartsWith("--"))
+                else if (args[0].StartsWith("-"))
                 {
-
+                    ManualCommands(args[0]);
                 }
             }
             else if (args.Length == 2)
@@ -46,14 +46,16 @@ namespace BlocklyForHouse.Transform.ConsoleClient
 
         static void ManualCommands(string input)
         {
-            Debug.Assert(input.StartsWith("--"));
-
+            Debug.Assert(input.StartsWith("-"));
+            if (input == "-help"){
+                Help();
+            }
         }
 
         static void Help()
         {
-            Console.WriteLine("ConsoleClient [input.xml] [output.py|txt]" +
-                "ConsoleClient --help");
+            Console.WriteLine("ConsoleClient [input.xml] [output.py|txt]\n" +
+                "ConsoleClient -help");
         }
 
         static bool ValidFileInput(string s) => s.EndsWith(".xml");
