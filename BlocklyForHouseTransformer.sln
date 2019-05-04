@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocklyForHouse.Transform.CLI", "ConsoleClient\BlocklyForHouse.Transform.CLI.csproj", "{92CEF98B-BCFE-4D2C-BC4A-08E8E78AC65A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocklyForHouse.Transform", "BlocklyForHouseTransformer\BlocklyForHouse.Transform.csproj", "{76004853-9349-4BA6-86E8-74A37D90885F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocklyForHouse.Transform.Tests", "BlocklyForHouse.Transform.Tests\BlocklyForHouse.Transform.Tests.csproj", "{67F3C9CB-7538-4AEA-9DAB-9B6C355BBBDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocklyForHouse.Transform", "BlocklyForHouse.Transform\BlocklyForHouse.Transform.csproj", "{38CFA7E7-CC8B-4E30-A7F5-17E483213698}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlocklyForHouse.Transform.CLI", "BlocklyForHouse.Transform.CLI\BlocklyForHouse.Transform.CLI.csproj", "{1E1924F2-7D3A-4F2D-88B8-4A54B4236BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{92CEF98B-BCFE-4D2C-BC4A-08E8E78AC65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92CEF98B-BCFE-4D2C-BC4A-08E8E78AC65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92CEF98B-BCFE-4D2C-BC4A-08E8E78AC65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92CEF98B-BCFE-4D2C-BC4A-08E8E78AC65A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76004853-9349-4BA6-86E8-74A37D90885F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76004853-9349-4BA6-86E8-74A37D90885F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76004853-9349-4BA6-86E8-74A37D90885F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76004853-9349-4BA6-86E8-74A37D90885F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67F3C9CB-7538-4AEA-9DAB-9B6C355BBBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67F3C9CB-7538-4AEA-9DAB-9B6C355BBBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F3C9CB-7538-4AEA-9DAB-9B6C355BBBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F3C9CB-7538-4AEA-9DAB-9B6C355BBBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38CFA7E7-CC8B-4E30-A7F5-17E483213698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38CFA7E7-CC8B-4E30-A7F5-17E483213698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38CFA7E7-CC8B-4E30-A7F5-17E483213698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38CFA7E7-CC8B-4E30-A7F5-17E483213698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1924F2-7D3A-4F2D-88B8-4A54B4236BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1924F2-7D3A-4F2D-88B8-4A54B4236BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1924F2-7D3A-4F2D-88B8-4A54B4236BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1924F2-7D3A-4F2D-88B8-4A54B4236BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

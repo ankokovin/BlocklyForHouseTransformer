@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlocklyForHouseTransformer\BlocklyForHouse.Transform.csproj" />
+    <ProjectReference Include="..\BlocklyForHouse.Transform\BlocklyForHouse.Transform.csproj" />
   </ItemGroup>
 
   <ItemGroup>
