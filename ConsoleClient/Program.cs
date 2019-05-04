@@ -9,7 +9,6 @@ namespace BlocklyForHouse.Transform.ConsoleClient
         const string defaultInputDir = "input.xml";
         static void Main(string[] args)
         {
-            //TODO work with args
             if (args.Length == 0)
             {
                 OutputResult(Console.OpenStandardOutput(), Parse(ReadInput()));
@@ -19,8 +18,10 @@ namespace BlocklyForHouse.Transform.ConsoleClient
                 if (ValidFileInput(args[0]))
                 {
                     OutputResult(Console.OpenStandardOutput(), Parse(ReadInput(args[0])));
-                }else if (ValidFileOutput(args[0]))
+                }
+                else if (ValidFileOutput(args[0]))
                 {
+                    AssureDirectory(args[0]);
                     using (Stream s = new FileStream(args[0], FileMode.Create))
                     {
                         OutputResult(s, Parse(ReadInput()));
@@ -28,12 +29,14 @@ namespace BlocklyForHouse.Transform.ConsoleClient
                 }
                 else if (args[0].StartsWith("--"))
                 {
-                    
+
                 }
-            }else if (args.Length == 2)
+            }
+            else if (args.Length == 2)
             {
                 if (!ValidFileInput(args[0]) || !ValidFileOutput(args[1]))
                     throw new Exception("Unexpected paramenters");
+                AssureDirectory(args[1]);
                 using (Stream s = new FileStream(args[1], FileMode.Create))
                 {
                     OutputResult(s, Parse(ReadInput(args[0])));
@@ -56,7 +59,7 @@ namespace BlocklyForHouse.Transform.ConsoleClient
         static bool ValidFileInput(string s) => s.EndsWith(".xml");
         static bool ValidFileOutput(string s) => s.EndsWith(".py") || s.EndsWith(".txt");
 
-        static string ReadInput(string inputPath= defaultInputDir)
+        static string ReadInput(string inputPath = defaultInputDir)
         {
             string text = string.Empty;
             try
@@ -87,6 +90,15 @@ namespace BlocklyForHouse.Transform.ConsoleClient
         {
             var transformer = new BlocklyTransformer();
             return transformer.XmlToPython(xml);
+        }
+
+
+        static void AssureDirectory(string path)
+        {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
         }
     }
 }
