@@ -13,5 +13,4 @@
     2. использовать docker с образом браузера
     
 Но всё же, если что - это вариант.
-## Docs
-[BlocklyForHouse.Transform](BlocklyForHouseTransformer/docs/BlocklyForHouse.Transform.md)
+
