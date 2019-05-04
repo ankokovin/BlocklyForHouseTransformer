@@ -9,6 +9,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// </summary>
     class Temperature : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Temperature;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

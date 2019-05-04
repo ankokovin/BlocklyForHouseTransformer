@@ -5,9 +5,11 @@ using System.Xml;
 
 namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Logic
 {
-    [Custom_attributes.Boolnean("logic_compare")]
+    [Custom_attributes.Boolean]
     class Compare : Block
     {
+        
+        public override string TypeName => TypeLiteralsXml.Compare;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

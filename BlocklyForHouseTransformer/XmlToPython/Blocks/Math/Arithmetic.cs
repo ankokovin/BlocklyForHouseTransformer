@@ -8,6 +8,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
     /// </summary>
     public class Arithmetic : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Arithmetic;
         /// <summary>
         /// Interpret context as <see cref="Arithmetic"/>
         /// </summary>

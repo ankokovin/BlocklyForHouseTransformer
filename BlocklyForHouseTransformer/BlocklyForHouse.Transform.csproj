@@ -17,12 +17,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>LiteralsPython.resx</DependentUpon>
     </Compile>
+    <Compile Update="TypeLiteralsXml.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeLiteralsXml.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="LiteralsPython.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LiteralsPython.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TypeLiteralsXml.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TypeLiteralsXml.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

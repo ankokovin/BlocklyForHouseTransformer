@@ -9,6 +9,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks.Math
     /// </summary>
     public class Number : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Number;
         /// <summary>
         /// Interpret context as <see cref="Number"/>
         /// </summary>

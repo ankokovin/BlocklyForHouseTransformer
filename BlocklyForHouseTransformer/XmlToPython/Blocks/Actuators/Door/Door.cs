@@ -6,6 +6,8 @@
     /// </summary>
     public class Door : Block
     {
+        public override string TypeName => TypeLiteralsXml.Door;
+
         /// <summary>
         /// Interpret context as <see cref="Door"/>
         /// </summary>

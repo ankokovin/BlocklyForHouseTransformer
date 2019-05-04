@@ -4,9 +4,11 @@
     /// For xml input:
     /// <para>&lt;block type=&quot;open_door&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.BodyCommand("open_door")]
+    [Custom_attributes.BodyCommand]
     public class OpenDoor : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.OpenDoor;
         /// <summary>
         /// Interpret context as <see cref="OpenDoor"/>
         /// </summary>

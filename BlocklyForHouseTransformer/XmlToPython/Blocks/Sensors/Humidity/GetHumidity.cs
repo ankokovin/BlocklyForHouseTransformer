@@ -8,6 +8,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// </summary>
     class GetHumidity : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.GetHumidity;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

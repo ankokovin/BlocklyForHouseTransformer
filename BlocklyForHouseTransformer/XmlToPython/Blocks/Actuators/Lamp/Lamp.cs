@@ -10,6 +10,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// </summary>
     class Lamp : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.Door;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

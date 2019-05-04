@@ -10,14 +10,11 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
     /// </summary>
     abstract class XmlTypeAttribute : Attribute 
     {
-
-
-
         /// <summary>
         /// Find all classes of <see cref="Blocks.Block"/> with some <see cref="XmlTypeAttribute"/> T
         /// </summary>
         /// <typeparam name="T">Attribute, which implements <see cref="XmlTypeAttribute"/></typeparam>
-        /// <returns>Dictionary of <see cref="Blocks.Block"/> with keys - <see cref="TypeName"/></returns>
+        /// <returns>Dictionary of <see cref="Blocks.Block"/> with keys - <see cref="Blocks.Block.TypeName"/></returns>
         public static Dictionary<string, Blocks.Block> GetBlocks<T>() where T : XmlTypeAttribute
         {
             var eventStarters = new Dictionary<string, Blocks.Block>();
@@ -30,7 +27,11 @@ namespace BlocklyForHouse.Transform.XmlToPython.Custom_attributes
                     {
                         if (!type.IsSubclassOf(typeof(Blocks.Block)))
                             throw new Exception(MethodBase.GetCurrentMethod().DeclaringType + " on class, which is not subclass of Block");
-                        eventStarters.Add(atr.TypeName, Activator.CreateInstance(type) as Blocks.Block);
+                        var block = Activator.CreateInstance(type) as Blocks.Block;
+                        if (block == null)
+                            throw new Exception(string.Format("Type {0} passed test:\" if (!type.IsSubclassOf(typeof(Blocks.Block)))\", but  Activator.CreateInstance(type) as Blocks.Block; returned null."
+                                , type.ToString()));
+                        eventStarters.Add(block.TypeName,block);
                     }
                 }
             }

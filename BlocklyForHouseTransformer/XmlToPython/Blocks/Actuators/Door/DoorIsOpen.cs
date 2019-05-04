@@ -4,9 +4,11 @@
     /// For xml input:
     /// <para>&lt;block type=&quot;door_is_open&quot;&gt;</para>
     /// </summary>
-    [Custom_attributes.Boolean("door_is_open")]
+    [Custom_attributes.Boolean]
     public class DoorIsOpen : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.DoorIsOpen;
         /// <summary>
         /// Interpret context as <see cref="DoorIsOpen"/>
         /// </summary>

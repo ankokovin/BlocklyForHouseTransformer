@@ -6,9 +6,11 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// For xml input:
     /// <para>&lt;block type=&quot;off_lamp&quot;&gt;</para>
     /// /// </summary>
-    [Custom_attributes.BodyCommand("off_lamp")]
+    [Custom_attributes.BodyCommand]
     class TurnOffLamp : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.TurnOffLamp;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);

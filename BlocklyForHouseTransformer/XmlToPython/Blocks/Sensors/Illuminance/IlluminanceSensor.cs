@@ -7,6 +7,8 @@ namespace BlocklyForHouse.Transform.XmlToPython.Blocks
     /// </summary>
     class IlluminanceSensor : Block
     {
+
+        public override string TypeName => TypeLiteralsXml.IlluminanceSensor;
         public override string Interpret(ref XmlToPythonContext context)
         {
             base.Interpret(ref context);
